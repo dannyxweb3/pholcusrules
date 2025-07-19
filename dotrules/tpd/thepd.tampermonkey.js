@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2025-07-19
 // @description  提取 category-container 分类信息并发送到 API，并支持手动触发发送逻辑
-// @description  设置: 允许跨域。执行方式: 页面加载执行; 手动点击菜单执行;
+// @description  设置: 允许跨域。执行方式: 页面加载执行; 手动点击菜单执行; chrome开启开发者模式; chrome允许执行用户脚本.
 // @author       You
 // @match        https://theporndude.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=tampermonkey.net
