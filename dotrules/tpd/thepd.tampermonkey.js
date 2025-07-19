@@ -19,7 +19,8 @@
 
     // 配置信息
     const CONFIG = {
-        apiUrl: 'http://192.168.194.135:8000/api/admin/category',
+        apiCateUrl: 'http://192.168.194.135:8000/api/admin/category',
+        apiLinkUrl: 'http://192.168.194.135:8000/api/admin/site/add',
         token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjEsImV4cCI6MTc4NDQyNDE1MCwibmJmIjoxNzUyODg4MTUwLCJpYXQiOjE3NTI4ODgxNTB9.daD8-FufO1oH8heJv1ysemi3To3ycHZkHDeGWntSDkI',
         targetClass: 'category-container'
     };
@@ -90,7 +91,7 @@
 
         GM.xmlHttpRequest({
             method: 'POST',
-            url: CONFIG.apiUrl,
+            url: CONFIG.apiCateUrl,
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Token': CONFIG.token
@@ -109,7 +110,7 @@
             },
             timeout: 10000 // 10秒超时
         });
-        // fetch(CONFIG.apiUrl, {
+        // fetch(CONFIG.apiCateUrl, {
         //     method: 'POST',
         //     headers: {
         //         'Content-Type': 'application/x-www-form-urlencoded',
