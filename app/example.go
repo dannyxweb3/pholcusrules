@@ -20,15 +20,16 @@ import (
 	"github.com/henrylee2cn/pholcus/runtime/status"
 	"github.com/henrylee2cn/pholcus/web"
 
-	_ "github.com/uxff/pholcusrules/dotrules/agricultures"
-	_ "github.com/uxff/pholcusrules/dotrules/duanwenxue"
-	_ "github.com/uxff/pholcusrules/dotrules/kuaidaili"
-	_ "github.com/uxff/pholcusrules/dotrules/mitre"
-	_ "github.com/uxff/pholcusrules/dotrules/qichacha"
-	_ "github.com/uxff/pholcusrules/dotrules/qzone"
-	_ "github.com/uxff/pholcusrules/dotrules/somexiangbao"
-	_ "github.com/uxff/pholcusrules/dotrules/vote"
-	_ "github.com/uxff/pholcusrules/dotrules/wx100000p"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/agricultures"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/duanwenxue"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/kuaidaili"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/mitre"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/qichacha"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/qzone"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/somexiangbao"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/tpd"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/vote"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/wx100000p"
 )
 
 var (

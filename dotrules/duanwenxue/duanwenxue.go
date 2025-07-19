@@ -11,7 +11,7 @@ import (
 	"github.com/henrylee2cn/pholcus/logs"                   //信息输出
 
 	// . "github.com/henrylee2cn/pholcus/app/spider/common" //选用
-	articlewriter "github.com/uxff/pholcusrules/articlewriter"
+	articlewriter "github.com/dannyxweb3/pholcusrules/articlewriter"
 
 	// net包
 	"net/http" //设置http.Header

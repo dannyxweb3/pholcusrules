@@ -1,4 +1,4 @@
-module github.com/uxff/pholcusrules
+module github.com/dannyxweb3/pholcusrules
 
 go 1.24.2
 
@@ -14,6 +14,7 @@ require (
 	github.com/DataDog/zstd v1.3.6-0.20190409195224-796139022798 // indirect
 	github.com/Shopify/sarama v1.23.1 // indirect
 	github.com/andybalholm/cascadia v1.0.0 // indirect
+	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/eapache/go-resiliency v1.1.0 // indirect
 	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect

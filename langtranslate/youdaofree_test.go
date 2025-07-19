@@ -3,7 +3,7 @@ package langtranslate_test
 import (
 	"testing"
 
-	. "github.com/uxff/pholcusrules/langtranslate"
+	. "github.com/dannyxweb3/pholcusrules/langtranslate"
 )
 
 func TestYoudaoTranslate(t *testing.T) {
