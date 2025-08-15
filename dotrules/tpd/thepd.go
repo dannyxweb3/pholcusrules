@@ -50,11 +50,29 @@ var MyWebSpider = &Spider{
 	Name:        "Thepdude",
 	Description: "Thepdude",
 	// Pausetime:    300,
-	// Keyin:        KEYIN,
+	Keyin: KEYIN,
 	// Limit:        LIMIT,
 	EnableCookie: false,
 	RuleTree: &RuleTree{
 		Root: func(ctx *Context) {
+
+			keyIn := strings.Trim(ctx.GetKeyin(), "\r\n\t ")
+			if keyIn != "" {
+				// keyIn = categories in multilines
+				categories := strings.Split(keyIn, "\n")
+				for _, category := range categories {
+					if category != "" {
+						ctx.AddQueue(&request.Request{
+							Url:    "https://theporndude.com/" + category,
+							Rule:   "CATEGORY_DETAIL",
+							Header: http.Header{"Referer": []string{HOME_URL}, "User-Agent": []string{AGENT_PUBLIC}},
+							Temp:   request.Temp{"cate_id": category}})
+					}
+				}
+				return
+			}
+			return
+
 			ctx.AddQueue(&request.Request{
 				Url:  HOME_URL,
 				Rule: "HOME",
@@ -150,7 +168,8 @@ var MyWebSpider = &Spider{
 func saveCategory(title, icon, iconcss, desc string) string {
 	// curl -XPOST http://192.168.194.135:8000/api/admin/category -H'Token: xxx' -d 'name=$title&icon=$icon&iconcss=$iconcss&desc=$desc&is_used=1'
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjEsImV4cCI6MTc4NDQyNDE1MCwibmJmIjoxNzUyODg4MTUwLCJpYXQiOjE3NTI4ODgxNTB9.daD8-FufO1oH8heJv1ysemi3To3ycHZkHDeGWntSDkI"
-	url := "http://192.168.194.135:8000/api/admin/category"
+	// url := "http://192.168.194.135:8000/api/admin/category"
+	url := "http://u20d.local:8000/api/admin/category"
 	req, err := http.NewRequest("POST", url, strings.NewReader("name="+title+"&icon="+icon+"&iconcss="+iconcss+"&desc="+desc+"&is_used=1"))
 	if err != nil {
 		logs.Log.Error("to saveCategory error:%s", err)
@@ -177,8 +196,9 @@ func saveCategory(title, icon, iconcss, desc string) string {
 func saveLink(link, title, icon, iconcss, imgPreview, desc, cateId string) {
 	// curl -XPOST http://192.168.194.135:8000/api/admin/site/add -H'Token: xxx' -d 'title=$title&icon=$icon&iconcss=$iconcss&desc=$desc&is_used=1'
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjEsImV4cCI6MTc4NDQyNDE1MCwibmJmIjoxNzUyODg4MTUwLCJpYXQiOjE3NTI4ODgxNTB9.daD8-FufO1oH8heJv1ysemi3To3ycHZkHDeGWntSDkI"
-	url := "http://192.168.194.135:8000/api/admin/site/add"
-	req, err := http.NewRequest("POST", url, strings.NewReader("title="+title+"&icon="+icon+"&icon_css="+iconcss+"&description="+desc+"&url="+link+"&img_preview="+imgPreview+"&category_id="+cateId+"&is_used=1"))
+	// url := "http://192.168.194.135:8000/api/admin/site/add"
+	url := "http://u20d.local:8000/api/admin/site/add"
+	req, err := http.NewRequest("POST", url, strings.NewReader("title="+title+"&icon="+icon+"&icon_css="+iconcss+"&description="+desc+"&url="+link+"&img_preview="+imgPreview+"&category="+cateId+"&is_used=1"))
 	if err != nil {
 		logs.Log.Error("to saveLink error:%s", err)
 		return
