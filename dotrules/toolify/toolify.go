@@ -279,8 +279,8 @@ var Toolify = &Spider{
 func saveCategory(title, slug, parent, desc string) string {
 	// curl -XPOST http://192.168.194.135:8000/api/admin/category -H'Token: xxx' -d 'name=$title&icon=$icon&iconcss=$iconcss&desc=$desc&is_used=1'
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjEsImV4cCI6MTc4NDQyNDE1MCwibmJmIjoxNzUyODg4MTUwLCJpYXQiOjE3NTI4ODgxNTB9.daD8-FufO1oH8heJv1ysemi3To3ycHZkHDeGWntSDkI"
-	// url := "http://192.168.194.135:8000/api/admin/category"
-	theurl := "http://u20d.local:8000/api/admin/category"
+	theurl := "http://192.168.194.135:8000/api/admin/category"
+	// theurl := "http://u20d.local:8000/api/admin/category"
 	urlValues := url.Values{}
 	urlValues.Add("title", title)
 	urlValues.Add("slug", slug)
@@ -314,8 +314,8 @@ func saveCategory(title, slug, parent, desc string) string {
 func saveLink(link, title, slug, category, icon, imgPreview, desc, tags, intro_basic, intro_use, intro_features, price_desc, social string) {
 	// curl -XPOST http://192.168.194.135:8000/api/admin/site/add -H'Token: xxx' -d 'title=$title&icon=$icon&iconcss=$iconcss&desc=$desc&is_used=1'
 	token := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOjEsImV4cCI6MTc4NDQyNDE1MCwibmJmIjoxNzUyODg4MTUwLCJpYXQiOjE3NTI4ODgxNTB9.daD8-FufO1oH8heJv1ysemi3To3ycHZkHDeGWntSDkI"
-	// url := "http://192.168.194.135:8000/api/admin/site/add"
-	theurl := "http://u20d.local:8000/api/admin/site/add"
+	theurl := "http://192.168.194.135:8000/api/admin/site/add"
+	// theurl := "http://u20d.local:8000/api/admin/site/add"
 	urlValue := url.Values{}
 	urlValue.Add("title", title)
 	urlValue.Add("category", category)
