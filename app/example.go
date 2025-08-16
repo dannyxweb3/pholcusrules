@@ -27,6 +27,7 @@ import (
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/qichacha"
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/qzone"
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/somexiangbao"
+	_ "github.com/dannyxweb3/pholcusrules/dotrules/toolify"
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/tpd"
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/vote"
 	_ "github.com/dannyxweb3/pholcusrules/dotrules/wx100000p"
